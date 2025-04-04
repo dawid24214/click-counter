@@ -1,8 +1,21 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+  function App() {
+     let count = 0;
+     const counterDisplay = document.getElementById('counter');
+     const clickBtn = document.getElementById('clickBtn');
+     const resetBtn = document.getElementById('resetBtn');
 
+     clickBtn.addEventListener('click', () => {
+         count++;
+         counterDisplay.textContent = count;
+     });
+
+     resetBtn.addEventListener('click', ()=>{
+         count = 0;
+         counterDisplay.textContent = count;
+     });
 
   return (
     <div className='container'>
